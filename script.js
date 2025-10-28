@@ -41,3 +41,4 @@ function updateCalendarDate() {
 }
 
 updateCalendarDate();
+setInterval(updateCalendarDate, 86400000); // Refresh every 24 hours
