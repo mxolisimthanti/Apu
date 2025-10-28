@@ -44,3 +44,12 @@ h1 {
   object-fit: cover;
   border-radius: 4px;
 }
+.calendar-box {
+  background-color: #660033;
+  color: white;
+  padding: 15px;
+  font-size: 1.2rem;
+  border-radius: 6px;
+  text-align: center;
+  margin-bottom: 20px;
+}
