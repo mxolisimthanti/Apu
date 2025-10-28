@@ -32,3 +32,12 @@ document.querySelectorAll('.filter-buttons button').forEach(button => {
     }
   });
 });
+function updateCalendarDate() {
+  const today = new Date();
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  const formattedDate = today.toLocaleDateString('en-ZA', options); // South African format
+
+  document.getElementById('calendar-date').textContent = `Today is ${formattedDate}`;
+}
+
+updateCalendarDate();
