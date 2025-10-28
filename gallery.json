@@ -2,21 +2,21 @@
   {
     "title": "Rugby Match",
     "category": "sports",
-    "image": "rugby.jpg"
+    "image": "international tours.png"
   },
   {
     "title": "Cultural Day",
     "category": "culture",
-    "image": "culture.jpg"
+    "image": "international tours.png"
   },
   {
     "title": "Science Lab",
     "category": "academics",
-    "image": "lab.jpg"
+    "image": "international tours.png"
   },
   {
     "title": "Leadership Camp",
     "category": "leadership",
-    "image": "camp.jpg"
+    "image": "international tours.png"
   }
 ]
