@@ -1,0 +1,22 @@
+[
+  {
+    "title": "Rugby Match",
+    "category": "sports",
+    "image": "rugby.jpg"
+  },
+  {
+    "title": "Cultural Day",
+    "category": "culture",
+    "image": "culture.jpg"
+  },
+  {
+    "title": "Science Lab",
+    "category": "academics",
+    "image": "lab.jpg"
+  },
+  {
+    "title": "Leadership Camp",
+    "category": "leadership",
+    "image": "camp.jpg"
+  }
+]
