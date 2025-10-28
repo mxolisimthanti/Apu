@@ -67,3 +67,19 @@ fetch(`https://api.airtable.com/v0/${BASE_ID}/${TABLE_NAME}?maxRecords=10&view=G
       calendarBox.appendChild(eventItem);
     });
   });
+fetch('events.json')
+  .then(response => response.json())
+  .then(events => {
+    const today = new Date().toISOString().split('T')[0];
+    const list = document.getElementById('event-list');
+
+    events.forEach(event => {
+      const li = document.createElement('li');
+      li.textContent = `${event.date} – ${event.title}`;
+      if (event.date === today) {
+        li.style.backgroundColor = '#fff8e1';
+        li.style.borderLeft = '5px solid #ffcc00';
+      }
+      list.appendChild(li);
+    });
+  });
