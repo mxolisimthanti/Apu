@@ -42,3 +42,28 @@ function updateCalendarDate() {
 
 updateCalendarDate();
 setInterval(updateCalendarDate, 86400000); // Refresh every 24 hours
+const API_KEY = 'your_airtable_api_key';
+const BASE_ID = 'your_base_id';
+const TABLE_NAME = 'School Calendar';
+
+const today = new Date().toISOString().split('T')[0];
+
+fetch(`https://api.airtable.com/v0/${BASE_ID}/${TABLE_NAME}?maxRecords=10&view=Grid%20view`, {
+  headers: {
+    Authorization: `Bearer ${API_KEY}`
+  }
+})
+  .then(response => response.json())
+  .then(data => {
+    const calendarBox = document.getElementById('calendar-box');
+    calendarBox.innerHTML = `<h2>Today: ${new Date().toLocaleDateString()}</h2>`;
+
+    data.records.forEach(record => {
+      const eventDate = record.fields.Date;
+      const isToday = eventDate === today;
+      const eventItem = document.createElement('div');
+      eventItem.className = isToday ? 'event today' : 'event';
+      eventItem.innerHTML = `<strong>${record.fields.Date}</strong>: ${record.fields.Event}`;
+      calendarBox.appendChild(eventItem);
+    });
+  });
