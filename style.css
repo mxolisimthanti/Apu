@@ -72,3 +72,17 @@ h1 {
   border-left-color: #ffcc00;
   background-color: #fff8e1;
 }
+.calendar-container {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 30px;
+}
+
+#event-list li {
+  background: white;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-left: 5px solid #660033;
+  border-radius: 4px;
+}
